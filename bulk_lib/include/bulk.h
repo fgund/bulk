@@ -20,7 +20,8 @@ public:
 		observers.push_back(observer);
 	}
 	void RemoveObserver(std::shared_ptr<IObserver> observer) {
-	    observers.erase(std::find(observers.begin(),observers.end(),observer));
+        auto iter = std::find(observers.begin(),observers.end(),observer);
+	    observers.erase(iter);
 	}
 	void Notify() {
 		auto result = PrepareOutput();
@@ -63,7 +64,7 @@ public:
 	}
 private:
 	bool has_nested{ false };
-	int bulk_size;
+	size_t bulk_size;
 	int nested_counter{ 0 };
 	std::vector<std::shared_ptr<IObserver> > observers;
 	std::vector<std::string> commands;
