@@ -4,6 +4,7 @@
 
 struct IObserver
 {
+    IObserver() = default;
 	virtual void Update(std::string param) = 0;
 };
 

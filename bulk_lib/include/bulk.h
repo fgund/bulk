@@ -3,6 +3,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include <memory>
 #include "IObserver.h"
 
 class Bulk
@@ -19,7 +20,7 @@ public:
 		observers.push_back(observer);
 	}
 	void RemoveObserver(std::shared_ptr<IObserver> observer) {
-		//observers.erase(observer);
+	    observers.erase(std::find(observers.begin(),observers.end(),observer));
 	}
 	void Notify() {
 		auto result = PrepareOutput();
