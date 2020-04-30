@@ -56,7 +56,7 @@ public:
 		auto end = commands.end();
 		for (; it != end; ++it) {
 			if (it != commands.begin()) {
-				result.append(",");
+				result.append(", ");
 			}
 			result.append(*it);
 		}
