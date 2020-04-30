@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['notify',['Notify',['../class_bulk.html#a9780fe3f15f17de7c8c8622369ba7bd3',1,'Bulk']]]
+  ['iobserver',['IObserver',['../struct_i_observer.html#a789de90cb26cc0e1eb23b971ee885b47',1,'IObserver']]]
 ];

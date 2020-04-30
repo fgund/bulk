@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['prepareoutput',['PrepareOutput',['../class_bulk.html#a6d2bed90cf61b3ba090e379bba8b15c7',1,'Bulk']]],
-  ['process',['Process',['../class_bulk.html#aab9100947e56720e6b20c990d83196f1',1,'Bulk']]]
+  ['notify',['Notify',['../class_bulk.html#a9780fe3f15f17de7c8c8622369ba7bd3',1,'Bulk']]]
 ];
