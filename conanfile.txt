@@ -1,8 +1,0 @@
-[requires]
-gtest/1.8.1@bincrafters/stable 
-boost_program_options/1.69.0@bincrafters/stable
-
-[generators]
-cmake
-
-[options]
