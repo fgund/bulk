@@ -2,7 +2,7 @@
 #define BULK_H
 #include <vector>
 #include <string>
-#include <iostream>
+#include <algorithm>
 #include <memory>
 #include "IObserver.h"
 
