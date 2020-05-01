@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>bulk: IObserver Struct Reference</title>
+<title>bulk: IObserver&lt; T &gt; Struct Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,43 +62,39 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="struct_i_observer-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IObserver Struct Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">IObserver&lt; T &gt; Struct Template Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="_i_observer_8h_source.html">IObserver.h</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for IObserver:</div>
-<div class="dyncontent">
-<div class="center"><img src="struct_i_observer__inherit__graph.png" border="0" usemap="#_i_observer_inherit__map" alt="Inheritance graph"/></div>
-<map name="_i_observer_inherit__map" id="_i_observer_inherit__map">
-<area shape="rect" id="node2" href="struct_console_logger.html" title="ConsoleLogger" alt="" coords="5,80,124,107"/>
-<area shape="rect" id="node3" href="struct_test_logger.html" title="TestLogger" alt="" coords="148,80,240,107"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a789de90cb26cc0e1eb23b971ee885b47"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_observer.html#a789de90cb26cc0e1eb23b971ee885b47">IObserver</a> ()=default</td></tr>
-<tr class="separator:a789de90cb26cc0e1eb23b971ee885b47"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afbab1d9e63e4ca806f5826e52eda3be4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_observer.html#afbab1d9e63e4ca806f5826e52eda3be4">Update</a> (std::string param)=0</td></tr>
-<tr class="separator:afbab1d9e63e4ca806f5826e52eda3be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a678eeef9cd223ad4275c39d2e488cfd4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_observer.html#a678eeef9cd223ad4275c39d2e488cfd4">IObserver</a> ()=default</td></tr>
+<tr class="separator:a678eeef9cd223ad4275c39d2e488cfd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad900472bc7cbd3c5d7a0a2f2c9a59aa1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_i_observer.html#ad900472bc7cbd3c5d7a0a2f2c9a59aa1">Update</a> (T param)=0</td></tr>
+<tr class="separator:ad900472bc7cbd3c5d7a0a2f2c9a59aa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="_i_observer_8h_source.html#l00005">5</a> of file <a class="el" href="_i_observer_8h_source.html">IObserver.h</a>.</p>
+<div class="textblock"><h3>template&lt;typename T&gt;<br />
+struct IObserver&lt; T &gt;</h3>
+
+
+<p class="definition">Definition at line <a class="el" href="_i_observer_8h_source.html#l00007">7</a> of file <a class="el" href="_i_observer_8h_source.html">IObserver.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a789de90cb26cc0e1eb23b971ee885b47"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a789de90cb26cc0e1eb23b971ee885b47">&#9670;&nbsp;</a></span>IObserver()</h2>
+<a id="a678eeef9cd223ad4275c39d2e488cfd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a678eeef9cd223ad4275c39d2e488cfd4">&#9670;&nbsp;</a></span>IObserver()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">IObserver::IObserver </td>
+          <td class="memname"><a class="el" href="struct_i_observer.html">IObserver</a>&lt; T &gt;::<a class="el" href="struct_i_observer.html">IObserver</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -114,19 +110,21 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="afbab1d9e63e4ca806f5826e52eda3be4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afbab1d9e63e4ca806f5826e52eda3be4">&#9670;&nbsp;</a></span>Update()</h2>
+<a id="ad900472bc7cbd3c5d7a0a2f2c9a59aa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad900472bc7cbd3c5d7a0a2f2c9a59aa1">&#9670;&nbsp;</a></span>Update()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void IObserver::Update </td>
+          <td class="memname">virtual void <a class="el" href="struct_i_observer.html">IObserver</a>&lt; T &gt;::Update </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">T&#160;</td>
           <td class="paramname"><em>param</em></td><td>)</td>
           <td></td>
         </tr>
@@ -138,7 +136,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="struct_test_logger.html#a3d1af7798cc6dae20d9602321e4e3d8d">TestLogger</a>, and <a class="el" href="struct_console_logger.html#a9af5f519fb4ebee5d5c6c45f5b66c8ce">ConsoleLogger</a>.</p>
+<p>Implemented in <a class="el" href="struct_file_logger.html#aa4d173596f43057446fb570003b43180">FileLogger</a>, <a class="el" href="struct_file_logger.html#a0091ce81407013504537d8db38a7a7cd">FileLogger</a>, <a class="el" href="struct_test_logger.html#a3d1af7798cc6dae20d9602321e4e3d8d">TestLogger</a>, and <a class="el" href="struct_console_logger.html#a9af5f519fb4ebee5d5c6c45f5b66c8ce">ConsoleLogger</a>.</p>
 
 </div>
 </div>

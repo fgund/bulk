@@ -74,20 +74,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4c5b0ea94dfdc7dcedb75ad6f3a25c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1109277ad0756d70e67b0f1fc57eb263"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#a1109277ad0756d70e67b0f1fc57eb263">~Bulk</a> ()</td></tr>
 <tr class="separator:a1109277ad0756d70e67b0f1fc57eb263"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7a82c3e267a8a9c84aa23c0f1eb6d212"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#a7a82c3e267a8a9c84aa23c0f1eb6d212">AddObserver</a> (std::shared_ptr&lt; <a class="el" href="struct_i_observer.html">IObserver</a> &gt; observer)</td></tr>
-<tr class="separator:a7a82c3e267a8a9c84aa23c0f1eb6d212"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b15a33a67e59151f190d8bab8477d99"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#a4b15a33a67e59151f190d8bab8477d99">RemoveObserver</a> (std::shared_ptr&lt; <a class="el" href="struct_i_observer.html">IObserver</a> &gt; observer)</td></tr>
-<tr class="separator:a4b15a33a67e59151f190d8bab8477d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9780fe3f15f17de7c8c8622369ba7bd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#a9780fe3f15f17de7c8c8622369ba7bd3">Notify</a> ()</td></tr>
-<tr class="separator:a9780fe3f15f17de7c8c8622369ba7bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1d622fe086e29f1e947c40a0e88eb7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#ac1d622fe086e29f1e947c40a0e88eb7c">NotifyResult</a> ()</td></tr>
+<tr class="separator:ac1d622fe086e29f1e947c40a0e88eb7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adbd90df7a6ff47f542ff1b7da3deef65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#adbd90df7a6ff47f542ff1b7da3deef65">NotifyTime</a> ()</td></tr>
+<tr class="separator:adbd90df7a6ff47f542ff1b7da3deef65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab9100947e56720e6b20c990d83196f1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#aab9100947e56720e6b20c990d83196f1">Process</a> (std::string &amp;&amp;cmd)</td></tr>
 <tr class="separator:aab9100947e56720e6b20c990d83196f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d2bed90cf61b3ba090e379bba8b15c7"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#a6d2bed90cf61b3ba090e379bba8b15c7">PrepareOutput</a> ()</td></tr>
 <tr class="separator:a6d2bed90cf61b3ba090e379bba8b15c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af695a982bdbd98ccf966e158bea84044"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#af695a982bdbd98ccf966e158bea84044">GetResultNotifier</a> ()</td></tr>
+<tr class="separator:af695a982bdbd98ccf966e158bea84044"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5569dbf3750d0be5b56b703b6b2b44e4"><td class="memItemLeft" align="right" valign="top">auto &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_bulk.html#a5569dbf3750d0be5b56b703b6b2b44e4">GetTimeNotifier</a> ()</td></tr>
+<tr class="separator:a5569dbf3750d0be5b56b703b6b2b44e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00009">9</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00011">11</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a4c5b0ea94dfdc7dcedb75ad6f3a25c2e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c5b0ea94dfdc7dcedb75ad6f3a25c2e">&#9670;&nbsp;</a></span>Bulk()</h2>
@@ -113,7 +115,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00012">12</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00014">14</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
 
 </div>
 </div>
@@ -140,13 +142,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00014">14</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00016">16</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a7a82c3e267a8a9c84aa23c0f1eb6d212"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7a82c3e267a8a9c84aa23c0f1eb6d212">&#9670;&nbsp;</a></span>AddObserver()</h2>
+<a id="af695a982bdbd98ccf966e158bea84044"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af695a982bdbd98ccf966e158bea84044">&#9670;&nbsp;</a></span>GetResultNotifier()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -155,35 +157,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Bulk::AddObserver </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="struct_i_observer.html">IObserver</a> &gt;&#160;</td>
-          <td class="paramname"><em>observer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00019">19</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
-
-</div>
-</div>
-<a id="a9780fe3f15f17de7c8c8622369ba7bd3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9780fe3f15f17de7c8c8622369ba7bd3">&#9670;&nbsp;</a></span>Notify()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Bulk::Notify </td>
+          <td class="memname">auto&amp; Bulk::GetResultNotifier </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -196,7 +170,88 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00026">26</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00063">63</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
+
+</div>
+</div>
+<a id="a5569dbf3750d0be5b56b703b6b2b44e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5569dbf3750d0be5b56b703b6b2b44e4">&#9670;&nbsp;</a></span>GetTimeNotifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">auto&amp; Bulk::GetTimeNotifier </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00066">66</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
+
+</div>
+</div>
+<a id="ac1d622fe086e29f1e947c40a0e88eb7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1d622fe086e29f1e947c40a0e88eb7c">&#9670;&nbsp;</a></span>NotifyResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bulk::NotifyResult </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00021">21</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
+
+</div>
+</div>
+<a id="adbd90df7a6ff47f542ff1b7da3deef65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbd90df7a6ff47f542ff1b7da3deef65">&#9670;&nbsp;</a></span>NotifyTime()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Bulk::NotifyTime </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00024">24</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
 
 </div>
 </div>
@@ -223,7 +278,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00053">53</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00051">51</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
 
 </div>
 </div>
@@ -251,35 +306,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00032">32</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
-
-</div>
-</div>
-<a id="a4b15a33a67e59151f190d8bab8477d99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b15a33a67e59151f190d8bab8477d99">&#9670;&nbsp;</a></span>RemoveObserver()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Bulk::RemoveObserver </td>
-          <td>(</td>
-          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="struct_i_observer.html">IObserver</a> &gt;&#160;</td>
-          <td class="paramname"><em>observer</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00022">22</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="bulk_8h_source.html#l00027">27</a> of file <a class="el" href="bulk_8h_source.html">bulk.h</a>.</p>
 
 </div>
 </div>

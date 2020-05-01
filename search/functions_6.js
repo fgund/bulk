@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['removeobserver',['RemoveObserver',['../class_bulk.html#a4b15a33a67e59151f190d8bab8477d99',1,'Bulk']]]
+  ['removeobserver',['RemoveObserver',['../struct_i_observable.html#a4ac033670d37290545d09937b339adbc',1,'IObservable']]]
 ];

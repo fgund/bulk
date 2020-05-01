@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['iobserver',['IObserver',['../struct_i_observer.html',1,'']]]
+  ['filelogger',['FileLogger',['../struct_file_logger.html',1,'']]]
 ];
