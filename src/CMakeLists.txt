@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.2)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake) 
 conan_basic_setup(TARGETS)
 
-project(bulk_usage)
+project(bulk)
 add_executable(${PROJECT_NAME} main.cpp)
 
 set_target_properties(
