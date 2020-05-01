@@ -3,10 +3,10 @@
 #include <fstream>
 #include "IObserver.h"
 
-struct FileLogger : public IObserver
+using timepoint = std::chrono::system_clock::time_point;
+struct FileLogger : public IObserver<std::string>, public IObserver<timepoint>
 {
-	virtual void Update(std::string param, timepoint time) override {
-		std::string filename = "bulk" + std::to_string(time.time_since_epoch().count()) + ".log";
+	virtual void Update(std::string param) override {
 		std::ofstream file(filename);
 		if (file.is_open())
 		{
@@ -14,6 +14,11 @@ struct FileLogger : public IObserver
 			file.close();
 		}
 	}
+	virtual void Update(timepoint time) override {
+		filename = "bulk" + std::to_string(time.time_since_epoch().count()) + ".log";
+	}
+private:
+	std::string filename;
 };
 
 #endif //FILE_LOGGER_H

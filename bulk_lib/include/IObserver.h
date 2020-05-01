@@ -3,11 +3,11 @@
 #include <string>
 #include <chrono>
 
+template<typename T>
 struct IObserver
 {
-	using timepoint = std::chrono::system_clock::time_point;
     IObserver() = default;
-	virtual void Update(std::string param, timepoint time) = 0;
+	virtual void Update(T param) = 0;
 };
 
 

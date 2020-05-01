@@ -2,9 +2,9 @@
 #define CONSOLE_LOGGER_H
 #include "IObserver.h"
 
-struct ConsoleLogger : public IObserver
+struct ConsoleLogger : public IObserver<std::string>
 {
-	virtual void Update(std::string param, timepoint time) override {
+	virtual void Update(std::string param) override {
 		std::cout << param << std::endl;
 	}
 };

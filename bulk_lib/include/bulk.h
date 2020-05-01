@@ -7,7 +7,7 @@
 #include <chrono>
 #include <iostream>
 #include "IObserver.h"
-
+#include "IObservable.h"
 class Bulk
 {
 public:
@@ -15,21 +15,14 @@ public:
 	}
 	~Bulk() {
 		if (!commands.empty() && !has_nested) {
-			Notify();
+			NotifyResult();
 		}
 	}
-	void AddObserver(std::shared_ptr<IObserver> observer) {
-		observers.push_back(observer);
+	void NotifyResult() {
+		result_notifier.Notify(PrepareOutput());
 	}
-	void RemoveObserver(std::shared_ptr<IObserver> observer) {
-        auto iter = std::find(observers.begin(),observers.end(),observer);
-	    observers.erase(iter);
-	}
-	void Notify() {
-		auto result = PrepareOutput();
-		for (auto& o : observers) {
-			o->Update(result, first_cmd_time);
-		}
+	void NotifyTime() {
+		time_notifier.Notify(std::chrono::system_clock::now());
 	}
 	void Process(std::string&& cmd) {
 		if (cmd == "{") {
@@ -41,16 +34,16 @@ public:
 		}
 		else {
 			if (commands.empty()) {
-				first_cmd_time = std::chrono::system_clock::now();
+				NotifyTime();
 			}
 			commands.emplace_back(std::move(cmd));
 		}
 		if ((commands.size() == bulk_size) && (!has_nested)) {
-			Notify();
+			NotifyResult();
 			commands.clear();
 		}
 		else if (has_nested && (nested_counter == 0)) {
-			Notify();
+			NotifyResult();
 			has_nested = false;
 			commands.clear();
 		}
@@ -67,12 +60,18 @@ public:
 		}
 		return std::move(result);
 	}
+	auto& GetResultNotifier() {
+		return result_notifier;
+	}
+	auto& GetTimeNotifier() {
+		return time_notifier;
+	}
 private:
 	bool has_nested{ false };
 	size_t bulk_size;
 	int nested_counter{ 0 };
-	std::chrono::system_clock::time_point first_cmd_time;
-	std::vector<std::shared_ptr<IObserver> > observers;
+	IObservable<std::string> result_notifier;
+	IObservable<std::chrono::system_clock::time_point> time_notifier;
 	std::vector<std::string> commands;
 };
 
