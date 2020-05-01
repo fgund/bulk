@@ -5,7 +5,7 @@
 #include "IObserver.h"
 struct TestLogger : public IObserver
 {
-    virtual void Update(std::string param) override {
+    virtual void Update(std::string param, timepoint time) override {
         bulks.emplace_back(param);
     }
     const std::vector<std::string>& GetBulks(){

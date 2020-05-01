@@ -4,6 +4,8 @@
 #include <string>
 #include <algorithm>
 #include <memory>
+#include <chrono>
+#include <iostream>
 #include "IObserver.h"
 
 class Bulk
@@ -26,7 +28,7 @@ public:
 	void Notify() {
 		auto result = PrepareOutput();
 		for (auto& o : observers) {
-			o->Update(result);
+			o->Update(result, first_cmd_time);
 		}
 	}
 	void Process(std::string&& cmd) {
@@ -38,6 +40,9 @@ public:
 			--nested_counter;
 		}
 		else {
+			if (commands.empty()) {
+				first_cmd_time = std::chrono::system_clock::now();
+			}
 			commands.emplace_back(std::move(cmd));
 		}
 		if ((commands.size() == bulk_size) && (!has_nested)) {
@@ -66,6 +71,7 @@ private:
 	bool has_nested{ false };
 	size_t bulk_size;
 	int nested_counter{ 0 };
+	std::chrono::system_clock::time_point first_cmd_time;
 	std::vector<std::shared_ptr<IObserver> > observers;
 	std::vector<std::string> commands;
 };

@@ -2,6 +2,7 @@
 #include "boost/program_options.hpp"
 #include "bulk.h"
 #include "ConsoleLogger.h"
+#include "FileLogger.h"
 
 namespace po = boost::program_options;
 
@@ -33,8 +34,10 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 	Bulk bulk_unit(bulk_size);
-	std::shared_ptr<IObserver> console_logger = std::make_shared<ConsoleLogger>();
+	auto console_logger = std::make_shared<ConsoleLogger>();
+	auto file_logger = std::make_shared<FileLogger>();
 	bulk_unit.AddObserver(console_logger);
+	bulk_unit.AddObserver(file_logger);
 	std::string input;
 	while (true) {
 		std::getline(std::cin, input);
