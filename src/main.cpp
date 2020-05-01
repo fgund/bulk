@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	po::options_description desc("Allowed options");
 	desc.add_options()
 		("help", "produce help message")
-		("N", po::value<int>(&bulk_size)->default_value(3), "set the bulk size")
+		("N", po::value<int>(&bulk_size), "set the bulk size")
 		;
 
 	po::variables_map vm;
