@@ -15,7 +15,6 @@ PROPERTIES
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
     bulk_lib
-    CONAN_PKG::boost_program_options
 )
 
 if (MSVC)

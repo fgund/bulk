@@ -1,38 +1,21 @@
 #include <iostream>
-#include "boost/program_options.hpp"
 #include "bulk.h"
 #include "ConsoleLogger.h"
 #include "FileLogger.h"
 
-namespace po = boost::program_options;
-
 int main(int argc, char *argv[])
 {
 	int bulk_size{ 0 };
-	po::options_description desc("Allowed options");
-	desc.add_options()
-		("help", "produce help message")
-		("N", po::value<int>(&bulk_size), "set the bulk size")
-		;
 
-	po::variables_map vm;
-	po::store(po::parse_command_line(argc, argv, desc), vm);
-	po::notify(vm);
-
-	if (vm.count("help")) {
-		std::cout << desc << "\n";
-		return 1;
+	if (argc == 2) {
+		bulk_size = std::atoi(argv[1]);
 	}
-
-	if (vm.count("N")) {
-		std::cout << "Bulk size was set to "
-			<< vm["N"].as<int>() << ".\n";
-	}
-	else {
+	else{
 		std::cout << "Bulk size was not set.\n";
-		std::cout << desc << "\n";
+		std::cout << "Please start the program like this: bulk arg"<< "\n";
 		return 1;
 	}
+	
 	Bulk bulk_unit(bulk_size);
 	auto console_logger = std::make_shared<ConsoleLogger>();
 	auto file_logger = std::make_shared<FileLogger>();
