@@ -4,6 +4,7 @@
 
 struct ConsoleLogger : public IObserver<std::string>
 {
+    ~ConsoleLogger(){};
 	virtual void Update(std::string param) override {
 		std::cout << param << std::endl;
 	}

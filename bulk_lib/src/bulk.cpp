@@ -19,8 +19,10 @@ void Bulk::Process(std::string&& cmd) {
 		++nested_counter;
 	}
 	else if (cmd == "}") {
-		--nested_counter;
-	}
+        if(nested_counter > 0){
+            --nested_counter;
+        }
+    }
 	else {
 		if (commands.empty()) {
 			NotifyTime();
@@ -47,7 +49,7 @@ std::string Bulk::PrepareOutput() {
 		}
 		result.append(*it);
 	}
-	return std::move(result);
+	return result;
 }
 IObservable<std::string>& Bulk::GetResultNotifier() {
 	return result_notifier;

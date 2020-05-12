@@ -7,6 +7,7 @@ template<typename T>
 struct IObserver
 {
     IObserver() = default;
+    virtual ~IObserver(){};
 	virtual void Update(T param) = 0;
 };
 

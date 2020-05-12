@@ -5,6 +5,7 @@
 #include "IObserver.h"
 struct TestLogger : public IObserver<std::string>
 {
+    ~TestLogger(){};
     virtual void Update(std::string param) override {
         bulks.emplace_back(param);
     }

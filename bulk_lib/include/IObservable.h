@@ -13,7 +13,9 @@ struct IObservable
 	}
 	void RemoveObserver(std::shared_ptr<IObserver<T> > observer) {
 		auto iter = std::find(observers.begin(), observers.end(), observer);
-		observers.erase(iter);
+        if(iter != std::end(observers)) {
+            observers.erase(iter);
+        }
 	}
 	void Notify(T result) {
 		for (auto& o : observers) {

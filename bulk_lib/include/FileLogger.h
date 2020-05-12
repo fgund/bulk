@@ -6,6 +6,7 @@
 using timepoint = std::chrono::system_clock::time_point;
 struct FileLogger : public IObserver<std::string>, public IObserver<timepoint>
 {
+    ~FileLogger(){};
 	virtual void Update(std::string param) override {
 		std::ofstream file(filename);
 		if (file.is_open())
